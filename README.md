@@ -20,3 +20,7 @@ A small summary of git important commands
 ## Other Useful Commands
 `git tag <tag name> <commit name, default – HEAD>` - create a tag named "tag name".  
 `git describe <ref>` - describe properties of a branch, the output is \<last tag\>_\<commits number from this tag\>_g\<current commit serial number\>.  
+
+## Remote Repository  
+`git fetch` - copy the whole remote repository state to the local computer. However, the command does not change any local repository files.  
+`git pull` - combine the two commands `git fetch` and  `git merge`.  
