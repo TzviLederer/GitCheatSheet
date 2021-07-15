@@ -18,4 +18,4 @@ A small summary of git important commands
 
 ## Other Useful Commands
 `git tag <tag name> <commit name, default – HEAD>` - create a tag named "tag name".  
-`git describe <ref>` - describe properties of a branch, the output is <last tag>_<commits number from this tag>_g<current commit serial number>.  
+`git describe <ref>` - describe properties of a branch, the output is \<last tag\>_\<commits number from this tag\>_g\<current commit serial number\>.  
