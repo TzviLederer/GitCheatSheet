@@ -7,8 +7,9 @@ A small summary of git important commands
 
 ### Checkout  
 `git checkout -b <brach name>` - create a new branch (named "branch name"), and checkout to it.  
-`git checkout -f <branch name> <new position>` - the flag `-f` stand for "force".  
+`git checkout -f <branch name> <new position>` - the flag `-f` stand for "force". It could be dangerous because it will delete all uncommited files.  
 `git checkout <branch>^<n>` - if the current branch is on top of a merge (means that it has more than one parent), the n will determine to which parent we will checkout.  
+`git checkout filename` will remove all changes made in `filename`.  
 
 ### Reset and Revert  
 `git reset HEAD^` / `git reset HEAD~1` – reset the current branch to past commit locally.  
@@ -17,6 +18,10 @@ A small summary of git important commands
 ### Move and Rebase commits  
 `git cherry-pick <c1> … <cn>` - take the commits c1 … cn and put them on top of the HEAD (the current place in the repository).  
 `git rebase -i HEAD~<n>` – rebase the n last commit to a new branch and let user to edit the commits (you can change the order of the commits or remove some of them).  
+
+## Merge  
+`git merge --abort` will abort the merge.  
+`git merge --continue` will continue an aborted merge (after solving the conflicts).  
 
 
 ## Remote Repository
@@ -41,3 +46,9 @@ If the source is empty, it will delete the remote branch.
 `git tag <tag name> <commit name, default – HEAD>` - create a tag named "tag name".  
 `git describe <ref>` - describe properties of a branch, the output is &lt;last tag>_&lt;commits number from this tag>_g&lt;current commit serial number>.  
 `git branch -u origin/main <branch name>` - connects the main branch in the remote repository to the current branch (even if is not the main branch locally), or to the branch specified on &lt;branch name>.  
+
+`git init` - initiate a new git repository. it will create the `.git` dir where all git data will be stored.  
+`git status` - print the current status.  
+`git log` - visualize the git status.  One can add the "--all --graph --decorate" flags to visualize it differentely. The "--oneline" argument will present a more compact representation.  
+`git diff filename` shows all changes in the file.  
+
